@@ -33,10 +33,12 @@ class Solution:
         a = ""
         if int(input_time.split(":")[0]) < 12:
             a="am"
+            hour = int(input_time.split(":")[0])
         else:
             a="pm"
+            hour = int(input_time.split(":")[0]) - 12
         time = ""
-        time += hours[int(input_time.split(":")[0])]
+        time += hours[hour]
         if int(input_time.split(":")[1]) in minutes:
             time += " " + minutes[int(input_time.split(":")[1])]
         return "It's " +time +" "+ a
