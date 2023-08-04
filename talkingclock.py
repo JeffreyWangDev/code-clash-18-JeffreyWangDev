@@ -31,7 +31,7 @@ minutes = {1:"oh one",2:"oh two",3:"oh three",4:"oh four",5:"oh five",10:"ten",1
 class Solution:    
     def ClockTalker(self, input_time):
         a = ""
-        if int(input_time.split(":")) < 12:
+        if int(input_time.split(":")[0]) < 12:
             a="am"
         else:
             a="pm"
